@@ -1,0 +1,14 @@
+export const ADD_TASK = "ADD_TASK";
+export const ADD_ALL_TASKS = "ADD_ALL_TASKS";
+export const DELETE_TASK = "DELETE_TASK";
+export const DELETE_ALL_TASKS = "DELETE_ALL_TASKS";
+export const UPDATE_TASK = "UPDATE_TASK";
+export const TOGGLE_COMPLETE_TASK = "TOGGLE_COMPLETE_TASK";
+export const TOGGLE_TASK_REMINDER = "TOGGLE_TASK_REMINDER";
+export const SHOW_FORM = "SHOW_FORM";
+export const HIDE_FORM = "HIDE_FORM";
+export const UPDATE_USER = "UPDATE_USER";
+export const TOGGLE_FORM = "TOGGLE_FORM";
+export const TOGGLE_LOADING = "TOGGLE_LOADING";
+export const SET_ERROR = "SET_ERROR";
+export const SET_CURENT_TASK = "SET_CURENT_TASK";
