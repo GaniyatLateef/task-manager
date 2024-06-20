@@ -14,15 +14,16 @@ import {
   getTaskById,
 } from "../api/service";
 import { FaPencil } from "react-icons/fa6";
-import TaskContext from "../context/Store";
+
 import {
   DELETE_TASK,
-  SET_CURENT_TASK,
+  SET_CURRENT_TASK,
   SET_ERROR,
   SHOW_FORM,
   TOGGLE_TASK_REMINDER,
   UPDATE_TASK,
 } from "../context/types";
+import TaskContext from "../context/store";
 
 const Task = ({ task }) => {
   const { dispatch } = React.useContext(TaskContext);
@@ -47,7 +48,7 @@ const Task = ({ task }) => {
   };
 
   const editTask = async (task) => {
-    dispatch({ type: SET_CURENT_TASK, payload: task });
+    dispatch({ type: SET_CURRENT_TASK, payload: task });
     dispatch({ type: SHOW_FORM });
   };
 

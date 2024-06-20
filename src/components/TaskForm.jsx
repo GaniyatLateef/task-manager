@@ -1,14 +1,14 @@
 import React from "react";
 import { getTaskById, postTask, updateTask } from "../api/service";
-import TaskContext from "../context/Store";
 import {
   ADD_TASK,
   HIDE_FORM,
-  SET_CURENT_TASK,
+  SET_CURRENT_TASK,
   SET_ERROR,
   TOGGLE_LOADING,
   UPDATE_TASK,
 } from "../context/types";
+import TaskContext from "../context/store";
 
 const TaskForm = () => {
   const { state, dispatch } = React.useContext(TaskContext);
@@ -61,7 +61,7 @@ const TaskForm = () => {
         const taskId = currentTask.id;
         const res = await updateTask({ ...formValues, id: taskId });
 
-        dispatch({ type: SET_CURENT_TASK, payload: {} });
+        dispatch({ type: SET_CURRENT_TASK, payload: {} });
         dispatch({ type: UPDATE_TASK, payload: res.data });
         dispatch({ type: HIDE_FORM });
       }

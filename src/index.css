@@ -14,8 +14,8 @@ body {
   max-width: 500px;
   margin: 30px auto;
   overflow: auto;
-  min-height: 300px;
-  max-height: 800px;
+  min-height: 700px;
+  max-height: 1000px;
   border: 1px solid steelblue;
   padding: 30px;
   border-radius: 5px;
@@ -127,7 +127,7 @@ body {
   align-items: center;
   justify-content: space-between;
   margin: 12px 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 1s ease-in;
 }
 
 .task-list {
@@ -159,3 +159,100 @@ body {
   align-items: center;
   margin-bottom: 10px ;
 }
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 50px;
+  gap: 24px;
+}
+
+.form-title {
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.form-block {
+  margin-top: 60px;
+}
+
+.form-error {
+  display: block;
+  color: #c40700;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form-block .error {
+  border: 2px solid #c40700;
+}
+
+.form-block .error-field {
+  display: block;
+  color: #c40700;
+  text-align: right;
+}
+
+.form-block .loading {
+  cursor: progress;
+  background-color: gray;
+}
+
+.login-form .no-account {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.reg-success {
+  width: 70%;
+  text-align: center;
+  margin: auto;  
+  margin-top: 80px;
+}
+
+.reg-success h3 {
+  font-size: 24px;
+  color: green;
+  margin-bottom: 20px;
+}
+
+.reg-success p {
+  margin-bottom: 20px;
+}
+
+.users-card {
+  border-top: 1px solid;
+  padding: 20px 0;
+}
+
+.users-panel .user {
+  background-color: rgb(223, 247, 239);
+  height: 60px;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.users-panel .user.admin {
+  border-right: 4px solid #c40700;
+}
+
+.users-panel .user .actions {
+  display: flex;
+  gap: 10px;
+}
+
+.users-panel .user .actions .icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: gray;
+}
+
+.users-panel .user .actions .icon.enabled {
+  color: darkblue;
+}
+

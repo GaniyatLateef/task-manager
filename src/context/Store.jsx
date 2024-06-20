@@ -3,11 +3,13 @@ import { reducer } from "./reducer";
 
 const initialState = {
     tasks: [],
+    users: [],
     showForm: false,
     isLoading: false,
     errMsg: null,
     currentTask: {},
     userProfile: {},
+    isLoggedIn: false,
 };
 
 const TaskContext = React.createContext();

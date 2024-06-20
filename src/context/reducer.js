@@ -74,9 +74,46 @@ export const reducer = (state, action) => {
       // action = {type:'SET_ERROR', payload: 'message'}
       return { ...state, errMsg: action.payload };
 
-    case operations.SET_CURENT_TASK:
-      // action = {type:'SET_CURENT_TASK', payload: currentTask}
+    case operations.SET_CURRENT_TASK:
+      // action = {type:'SET_CURERNT_TASK', payload: currentTask}
       return { ...state, currentTask: action.payload };
+
+    case operations.SET_USER_PROFILE:
+      //action = {type: 'SET_USER_PROFILE', payload: userProfile}
+      return { ...state, userProfile: action.payload};
+
+    case operations.REMOVE_USER_PROFILE:
+        //action = {type: 'REMOVE_USER_PROFILE'}
+        return { ...state, userProfile: {}};  
+
+    case operations.SET_AUTH_TOKEN:
+        //action = {type: 'SET_AUTH_TOKEN', payload: authToken}
+        localStorage.setItem(operations.AUTH_TOKEN_KEY, action.payload);
+        return { ...state };  
+
+    case operations.REMOVE_AUTH_TOKEN:
+          // action = {type:'SET_CURENT_TASK'}
+          localStorage.removeItem(operations.AUTH_TOKEN_KEY);
+          return { ...state};
+
+    
+    case operations.IS_LOGGED_IN:
+            // action = {type:'IS_LOGGED_IN'}
+            return { ...state, isLoggedIn: true };
+
+    case operations.IS_LOGGED_OUT:
+            // action = {type:'IS_LOGGED_OUT'}
+            return { ...state, isLoggedIn: false };      
+
+    case operations.ADD_ALL_USERS:
+           //action = {type: 'ADD_ALL_USERS', payload: [user1, user2]} 
+         return { ...state, users: [...action.payload] };    
+      
+    case operations.UPDATE_USER:
+      //action = {type: 'UPDATE_USER', payload: user}
+      return { ...state, users: [action.payload,
+         ...state.users.filter((user) => user.id !==action.payload.id)]};
+  
 
     default:
       return state;
